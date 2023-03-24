@@ -6,6 +6,8 @@ import github from "@/components/svgs/github";
 import instagram from "@/components/svgs/instagram";
 import tiktok from "@/components/svgs/tiktok";
 import youtube from "@/components/svgs/youtube";
+import LearnIcon from "@/components/svgs/learn";
+import GitIcon from "@/components/svgs/git";
 
 const menus = [
   { href: "/", text: "home" },
@@ -66,6 +68,52 @@ export default function Home() {
           </div>
         </div>
       </header>
+
+      <main className='px-4 py-12'>
+        {/* Hero section */}
+        <section className='mt-[58px] mx-auto md:max-w-3xl lg:max-w-7xl lg:flex lg:items-center justify-between'>
+          <div>
+            <h3 className='flex flex-col font-light text-text text-[34px] md:text-[72px]'>
+              <span className='flex items-center'>
+                Let’s learn <LearnIcon className='md:w-14 h-14' />
+              </span>
+              <span className='flex items-center'>
+                to code <GitIcon className='md:w-14 md:h-14' />
+              </span>
+              <span>an application</span>
+            </h3>
+          </div>
+          <div className='md:flex items-center justify-between  lg:w-[30%]'>
+            <div className='mt-8 lg:mt-0 '>
+              <span className='text-text text-[16px]  leading-[160%]'>
+                with me{" "}
+                <span className='text-brand'>Muhammad Jaya Saputra</span>, a
+                software developer who loves to share how to code in many
+                programing languages and multi platforms.
+              </span>
+              <div className='mt-[32px] flex items-center'>
+                <button className='py-2 px-6 bg-brand rounded-full text-white mr-4'>
+                  Start Learn
+                </button>
+                <div className='flex space-x-4 md:hidden'>
+                  {icons.map((icon, index) => (
+                    <a key={index} href={icon.href}>
+                      <icon.icon />
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </div>
+            <div className='sm:hidden md:flex md:space-y-4 md:flex-col hidden lg:hidden'>
+              {icons.map((icon, index) => (
+                <a key={index} href={icon.href}>
+                  <icon.icon />
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
+      </main>
     </>
   );
 }
