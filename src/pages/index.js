@@ -71,7 +71,7 @@ export default function Home() {
 
       <main className='px-4 py-12'>
         {/* Hero section */}
-        <section className='mt-[58px] mx-auto md:max-w-3xl lg:max-w-7xl lg:flex lg:items-center justify-between'>
+        <section className='mt-[58px] mx-auto md:max-w-3xl lg:max-w-7xl lg:flex lg:items-end justify-between'>
           <div>
             <h3 className='flex flex-col font-light text-text text-[34px] md:text-[72px]'>
               <span className='flex items-center'>
@@ -85,7 +85,7 @@ export default function Home() {
           </div>
           <div className='md:flex items-center justify-between  lg:w-[30%]'>
             <div className='mt-8 lg:mt-0 '>
-              <span className='text-text text-[16px]  leading-[160%]'>
+              <span className='text-text text-[16px]  leading-[160%] lg:text-[20px]'>
                 with me{" "}
                 <span className='text-brand'>Muhammad Jaya Saputra</span>, a
                 software developer who loves to share how to code in many
