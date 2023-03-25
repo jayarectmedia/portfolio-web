@@ -16,10 +16,13 @@ const menus = [
 ];
 
 const icons = [
-  { href: "http://github.com", icon: github },
-  { href: "http://instagram.com", icon: instagram },
+  { href: "http://github.com/jayarectmedia", icon: github },
+  { href: "http://instagram.com/jaya.saptr", icon: instagram },
   { href: "http://tiktok.com", icon: tiktok },
-  { href: "http://youtube.com", icon: youtube },
+  {
+    href: "http://youtube.com/channel/UCIbflSr9NYPWYoDZ6Wf2lsg",
+    icon: youtube,
+  },
 ];
 
 const portfolio = [
@@ -50,7 +53,7 @@ export default function Home() {
               href='/'
               className='flex flex-row py-2 space-x-2 md:px-3 md:space-x-4 items-center'>
               <img
-                src='https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50'
+                src='/img/jaya.jpg'
                 className='w-6 h-6 md:w-10 md:h-10 object-cover rounded-full'
               />
               <span className='font-semibold text-text'>It's Jay's</span>
@@ -148,6 +151,43 @@ export default function Home() {
               </span>
             </div>
           ))}
+        </section>
+        {/* person */}
+        <section className='mx-auto md:max-w-3xl lg:max-w-7xl py-9 lg:flex lg:flex-row items-center lg:justify-between'>
+          <div className='flex justify-between items-center'>
+            <div className='font-light text-text text-[20px] flex flex-col leading-[150%] md:text-[72px]'>
+              <div className='md:flex md:items-center hidden'>
+                <span className='md:mr-6'>It's me</span>
+                <Link href='/'>
+                  <img
+                    src='/img/jaya.jpg'
+                    className='md:w-[56px] md:h-[56px] md:object-cover md:rounded-full '
+                  />
+                </Link>
+              </div>
+              <span className='md:hidden'>It's me</span>
+              <span>Muhammad Jaya</span>
+              <span>Saputra</span>
+            </div>
+            <Link
+              href='/'
+              className='py-2 space-x-2 md:px-3 md:space-x-4 md:hidden'>
+              <img
+                src='/img/jaya.jpg'
+                className='w-14 h-14 md:w-10 md:h-10 object-cover rounded-full'
+              />
+            </Link>
+          </div>
+          <div className='mt-8 flex flex-col space-y-4 text-text leading-[160%] md:text-[20px] md:w-[70%] lg:w-[30%]'>
+            <span>
+              I like to code and keep it simple, try something new, and learn
+              more. I think sharing knowledge is the best practice to improve my
+              skills, and I try to do it.
+            </span>
+            <span>
+              I am currently work the Programmer at PT Rectmedia, a company.
+            </span>
+          </div>
         </section>
       </main>
     </>
