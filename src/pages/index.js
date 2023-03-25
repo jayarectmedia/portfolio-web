@@ -22,6 +22,24 @@ const icons = [
   { href: "http://youtube.com", icon: youtube },
 ];
 
+const portfolio = [
+  {
+    link: "https://source.unsplash.com/360x200?programmer",
+    title: "Programmer",
+    subtitle: "Build app with love ❤",
+  },
+  {
+    link: "https://source.unsplash.com/360x200?web",
+    title: "Web Developer",
+    subtitle: "Tailwind and next JS",
+  },
+  {
+    link: "https://source.unsplash.com/360x200?android",
+    title: "Mobile Developer",
+    subtitle: "Build app with flutter ❤",
+  },
+];
+
 export default function Home() {
   return (
     <>
@@ -84,7 +102,7 @@ export default function Home() {
             </h3>
           </div>
           <div className='md:flex items-center justify-between  lg:w-[30%]'>
-            <div className='mt-8 lg:mt-0 '>
+            <div className='mt-8 lg:mt-0 md:w-[50%] lg:w-full'>
               <span className='text-text text-[16px]  leading-[160%] lg:text-[20px]'>
                 with me{" "}
                 <span className='text-brand'>Muhammad Jaya Saputra</span>, a
@@ -112,6 +130,24 @@ export default function Home() {
               ))}
             </div>
           </div>
+        </section>
+        {/* Portfolio */}
+        <section className='mt-[56px] md:flex md:flex-wrap justify-center mx-auto md:max-w-3xl lg:max-w-7xl lg:justify-between '>
+          {portfolio.map((portfolio, index) => (
+            <div className='p-4 border-dashed border-2 border-text-100 rounded-[32px] flex flex-col mb-3 md:mr-3 md:w-[45%] lg:w-[30%]'>
+              <img
+                className='object-cover rounded-[16px] '
+                src={portfolio.link}
+                alt=''
+              />
+              <span className='mt-4 text-text font-medium text-[18px] mx-2'>
+                {portfolio.title}
+              </span>
+              <span className='mt-1 text-text  text-[14px] mx-2'>
+                {portfolio.subtitle}
+              </span>
+            </div>
+          ))}
         </section>
       </main>
     </>
